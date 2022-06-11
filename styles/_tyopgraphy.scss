@@ -1,0 +1,58 @@
+@import "mixins";
+
+@mixin app-headline {
+  font-size: 28px;
+  line-height: 1.2858342857;
+  font-weight: 700;
+  letter-spacing: .007em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0em;
+  }
+
+  @include laptop {
+    font-size: 72px;
+    line-height: 1.0555555556;
+    letter-spacing: -0.012em;
+  }
+
+  @include desktop {
+    font-size: 80px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+}
+
+@mixin body {
+  font-size: 17px;
+  line-height: 1.4705882353;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+@mixin deviceName {
+  font-size: 12px;
+  line-height: 1.3333733333;
+  font-weight: 600;
+  letter-spacing: .007em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  
+  @include tablet {
+    font-size: 12px;
+    line-height: 1.3333733333;
+    letter-spacing: .007em;
+  }
+
+  @include laptop {
+    font-size: 19px;
+    line-height: 1.2105263158;
+    letter-spacing: .012em;
+  }
+
+
+}

@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-import LearnMore from '../elements/LearnMore';
+import ExternalLink from '../elements/ExternalLink';
 
 const navItems = [
   'Store',
@@ -73,7 +73,7 @@ const Header = () => {
         <div className="container">
           <p>
             Friday Night Baseball, now streaming on Apple TV+.
-            <LearnMore />
+            <ExternalLink />
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import LearnMore from '../elements/LearnMore';
+import ExternalLink from '../elements/ExternalLink';
 import styles from './Pricing.module.scss';
 import IntersectionAnimate from '../elements/IntersectionAnimate';
 
@@ -34,7 +34,7 @@ const Pricing = ({
               <a href={footNote.hash}>{footNote.label}</a>
             </sup>
           )}
-          {learnMore && <LearnMore />}
+          {learnMore && <ExternalLink />}
         </p>
         <a className={styles.actionBtn}>{action}</a>
       </IntersectionAnimate>

@@ -1,0 +1,29 @@
+@mixin breakPoint($minWidth) {
+  @media only screen and (min-width: $minWidth) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include breakPoint(1441px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @include breakPoint(1068px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include breakPoint(833px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @include breakPoint(734px) {
+    @content;
+  }
+}

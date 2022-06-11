@@ -1,17 +1,68 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
 import Layout from '../components/layout/Layout';
+import styles from '../styles/Home.module.scss';
+import Image from 'next/image';
+import { useRef, useState } from 'react';
 
 const Home: NextPage = () => {
+  let vdRef = useRef();
+  const [paused, setPaused] = useState(false);
+
   return (
     <Layout>
-      <video
-        loop
-        autoPlay
-        src="https://www.apple.com/105/media/us/apple-tv-plus/2022/755f2d0d-659f-44e2-a345-57305fabfdfa/supercut/medium.mp4"
-      ></video>
+      <section className={styles.hero_section}>
+        <div className={styles.video_wrapper}>
+          <div>
+            <video
+              muted
+              loop
+              autoPlay
+              ref={vdRef}
+              src="https://www.apple.com/105/media/us/apple-tv-plus/2022/755f2d0d-659f-44e2-a345-57305fabfdfa/supercut/large.mp4"
+            />
+          </div>
+
+          <div className={styles.content_wrapper}>
+            <div>
+              <div className={styles.main_content}>
+                <h2>
+                  <p>
+                    All Apple Originals.
+                    <br className="large" />
+                    Only on&nbsp;Apple&nbsp;TV+.
+                  </p>
+                </h2>
+                <div className={styles.cta_section}>
+                  <a href="#">Stream now</a>
+                </div>
+                <p className={styles.cta_desc}>
+                  <span> Watch on the </span>
+                  <Image src="/icons/tv.png" width={41} height={41} />
+                  <span>app</span>
+                </p>
+              </div>
+            </div>
+            <div className={styles.video_control}>
+              <button
+                onClick={() => {
+                  setPaused(!paused);
+                  if (!paused) {
+                    vdRef.current.pause();
+                  } else {
+                    vdRef.current.play();
+                  }
+                }}
+              >
+                <Image
+                  src={paused ? '/icons/play.svg' : '/icons/pause.svg'}
+                  height={36}
+                  width={36}
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };

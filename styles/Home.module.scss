@@ -1,116 +1,161 @@
-.container {
-  padding: 0 2rem;
-}
+@import "mixins";
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+.hero_section {
+  position: relative;
+  margin-top: -96px;
+  height: 100vh;
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
+  .video_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    flex-direction: column;
+    z-index: 1;
+    height: calc(100vh + 320px);
+
+    & > div {
+      height: calc(100vh - 52px);
+      width: 100%;
+      position: sticky;
+      top: 52px;
+      left: 0;
+      overflow: hidden;
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.99;
+      }
+
+
+    }
+
+    .content_wrapper {
+      position: absolute;
+      color: #fff;
+      z-index: 3;
+      height: 100vh;
+      top: 0;
+
+      & > div {
+        margin: 0 auto;
+        max-width: 87.5%;
+
+
+        @include tablet {
+          & {
+            max-width: 692px;
+          }
+        }
+
+        @include laptop {
+          & {
+            max-width: 980px;
+          }
+        }
+
+        @include desktop {
+          & {
+            max-width: 1208px;
+          }
+
+        }
+      }
+
+
+      .main_content {
+        position: absolute;
+        bottom: 88px;
+        pointer-events: auto;
+
+        h2 {
+          font-size: 40px;
+          line-height: 1.1;
+          font-weight: 700;
+          letter-spacing: 0em;
+          font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+          @include tablet {
+            font-size: 80px;
+            line-height: 1.05;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+          }
+          @include desktop {
+            & {
+              font-size: 96px;
+              line-height: 1.0416666667;
+              font-weight: 700;
+              letter-spacing: -0.015em;
+            }
+          }
+        }
+
+
+        .cta_section {
+          margin-top: 0.9em;
+
+          a {
+            background-color: #fff;
+            border-radius: 100px;
+            padding: 18px 31px;
+            color: #1d1d1f;
+            font-weight: 700;
+            margin-top: 27px;
+            display: inline-block;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .cta_desc {
+          margin-top: 52px;
+          display: flex;
+          align-items: center;
+          gap: 3.5px;
+          font-size: 19px;
+          line-height: 1.2105263158;
+          font-weight: 600;
+          letter-spacing: .012em;
+          font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+          @include desktop {
+            & {
+              margin-top: 172px;
+            }
+          }
+
+          @include laptop {
+            & {
+              margin-top: 62px;
+            }
+          }
+        }
+
+      }
+
+      .video_control {
+        position: fixed;
+        bottom: 36px;
+        right: 42px;
+
+        button {
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+
   }
+
+
 }

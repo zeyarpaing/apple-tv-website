@@ -1,4 +1,4 @@
-import styles from '../../styles/Header.module.scss';
+import styles from './Header.module.scss';
 
 const navItems = [
   'Store',
@@ -8,30 +8,78 @@ const navItems = [
   'Watch',
   'AirPods',
   'TV & Home',
+  'Only on Apple',
   'Accessories',
   'Support',
 ];
 const Header = () => {
   return (
-    <header>
+    <>
       <nav className={styles.appleNavHeader}>
         <div className="container">
-          <ul>
+          <ul className={styles.mobileNav}>
             <li>
-              <img src="/apple-logo.svg" alt="apple-logo" />
+              <a className={styles.menuIcon}>
+                <span>Menu</span>
+              </a>
+            </li>
+            <li>
+              <a className={styles.appleIcon}>
+                <span>Apple</span>
+              </a>
+            </li>
+            <li>
+              <a className={styles.bagIcon}>
+                <span>Bag</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul className={styles.nav}>
+            <li>
+              <a className={styles.appleIcon}>
+                <span>Apple</span>
+              </a>
             </li>
             {navItems.map((item, idx) => (
               <li key={idx}>
-                <a href="#">{item}</a>
+                <a href="#">
+                  <span>{item}</span>
+                </a>
               </li>
             ))}
+
             <li>
-              <a className="ac-gn-link ac-gn-link-bag"></a>
+              <a className={styles.searchIcon}>
+                <span>Search</span>
+              </a>
+            </li>
+            <li>
+              <a className={styles.bagIcon}>
+                <span>Bag</span>
+              </a>
             </li>
           </ul>
         </div>
       </nav>
-    </header>
+      <nav className={styles.tvNav}>
+        <div className="container">
+          <a>Apple TV+</a>
+          <div className={styles.stream_btn}>Stream now</div>
+        </div>
+      </nav>
+      <div className={styles.promo_content}>
+        <div className="container">
+          <p>
+            Friday Night Baseball, now streaming on Apple TV+.
+            <a>
+              <span>Learn more</span>
+              <span className="icon more"></span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 @import "mixins";
 
-.hero_section {
+.heroSection {
   position: relative;
   margin-top: -96px;
   height: 100vh;
@@ -12,7 +12,20 @@
     left: 0;
     width: 100%;
     z-index: 1;
-    height: calc(100vh + 320px);
+    //height: calc(100% + 100vh + 20rem);
+    height: 2512px;
+
+    @include mobile {
+      & {
+        height: 2320px;
+
+      }
+    }
+    @include tablet {
+      & {
+        height: 1877px;
+      }
+    }
 
     & > div {
       height: calc(100vh - 52px);
@@ -33,6 +46,16 @@
         opacity: 0.99;
       }
 
+      .overlay {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: 0.001;
+        z-index: 3;
+      }
 
     }
 
@@ -44,28 +67,7 @@
       top: 0;
 
       & > div {
-        margin: 0 auto;
-        max-width: 87.5%;
-
-
-        @include tablet {
-          & {
-            max-width: 692px;
-          }
-        }
-
-        @include laptop {
-          & {
-            max-width: 980px;
-          }
-        }
-
-        @include desktop {
-          & {
-            max-width: 1208px;
-          }
-
-        }
+        @include container;
       }
 
 
@@ -73,13 +75,20 @@
         position: absolute;
         bottom: 88px;
         pointer-events: auto;
+        opacity: 0.999;
+
+        @include desktop {
+          & {
+            bottom: 80px;
+          }
+        }
 
         h2 {
           font-size: 40px;
           line-height: 1.1;
           font-weight: 700;
           letter-spacing: 0em;
-          font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-family: SF Pro Display, sans-serif;
 
 
           @include tablet {
@@ -126,27 +135,30 @@
           line-height: 1.2105263158;
           font-weight: 600;
           letter-spacing: .012em;
-          font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-
-          @include desktop {
-            & {
-              margin-top: 172px;
-            }
-          }
+          font-family: SF Pro Display, sans-serif;
 
           @include laptop {
             & {
               margin-top: 62px;
             }
           }
+          @include desktop {
+            & {
+              margin-top: 170px;
+            }
+          }
+
+
         }
 
       }
 
-      .video_control {
+      .videoControl {
         position: fixed;
         bottom: 36px;
         right: 42px;
+        transition: opacity .6s;
+        opacity: 0.999;
 
         button {
           background-color: transparent;
@@ -155,7 +167,65 @@
       }
     }
 
+
   }
 
 
+}
+
+
+.valueSection {
+  position: relative;
+  z-index: 4;
+
+
+  & > div {
+    @include container;
+    padding: 0 0 150px;
+
+    ul {
+      list-style-type: none;
+      color: #fff;
+      font-family: SF Pro Display, sans-serif;
+
+      font-size: 28px;
+      line-height: 1.2858342857;
+      font-weight: 700;
+      letter-spacing: .007em;
+
+      @include tablet {
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: 0em;
+      }
+      @include laptop {
+        font-size: 48px;
+        line-height: 1.0834933333;
+        letter-spacing: -0.003em;
+      }
+      @include desktop {
+        font-size: 64px;
+        line-height: 1.0625;
+        letter-spacing: -0.009em;
+      }
+
+      li {
+        margin-top: 50px;
+      }
+
+      li:first-child {
+        margin-top: 0;
+      }
+
+    }
+  }
+}
+
+.pricingSection {
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 175px;
+    @include container;
+  }
 }

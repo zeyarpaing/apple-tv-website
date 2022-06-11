@@ -27,3 +27,27 @@
     @content;
   }
 }
+
+@mixin container() {
+  margin: 0 auto;
+  max-width: 87.5%;
+
+
+  @include tablet {
+    & {
+      max-width: 692px;
+    }
+  }
+
+  @include laptop {
+    & {
+      max-width: 980px;
+    }
+  }
+
+  @include desktop {
+    & {
+      max-width: 1208px;
+    }
+  }
+}

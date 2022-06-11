@@ -47,3 +47,16 @@ a {
   content: "";
   padding-left: 0.3em;
 }
+
+
+.before-floatin {
+  opacity: .001;
+  transform: translateY(50px);
+  transition: transform .6s, opacity .6s;
+  will-change: opacity, transform;
+}
+
+.entered-floatin {
+  opacity: .999;
+  transform: translateY(0);
+}

@@ -1,4 +1,5 @@
 import styles from './Header.module.scss';
+import LearnMore from '../elements/LearnMore';
 
 const navItems = [
   'Store',
@@ -65,17 +66,14 @@ const Header = () => {
       <nav className={styles.tvNav}>
         <div className="container">
           <a>Apple TV+</a>
-          <div className={styles.stream_btn}>Stream now</div>
+          <a className={styles.stream_btn}>Stream now</a>
         </div>
       </nav>
       <div className={styles.promo_content}>
         <div className="container">
           <p>
             Friday Night Baseball, now streaming on Apple TV+.
-            <a>
-              <span>Learn more</span>
-              <span className="icon more"></span>
-            </a>
+            <LearnMore />
           </p>
         </div>
       </div>

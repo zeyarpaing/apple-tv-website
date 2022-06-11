@@ -55,7 +55,7 @@
 
       a.bagIcon {
         background-size: 13px 44px;
-        background-image: url(/bag.svg);
+        background-image: url(/icons/bag.svg);
         width: 13px;
         @include spanHidden;
       }
@@ -63,7 +63,7 @@
       a.searchIcon {
         background-position: 0 0;
         background-size: 15px 88px;
-        background-image: url(/search.svg);
+        background-image: url(/icons/search.svg);
         width: 15px;
         @include spanHidden;
       }
@@ -109,7 +109,7 @@
     }
 
     .stream_btn {
-      font-weight: 400;
+      font-weight: 300;
       background: linear-gradient(#ffffff, #e5e5e5);
       border-color: #fafafc;
       color: #1d1d1f;
@@ -140,7 +140,7 @@
 
     a {
       padding-left: 4px;
-      color: #2997ff;
+
     }
   }
 }

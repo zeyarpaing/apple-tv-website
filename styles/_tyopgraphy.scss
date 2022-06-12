@@ -41,7 +41,7 @@
   font-weight: 600;
   letter-spacing: .007em;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  
+
   @include tablet {
     font-size: 12px;
     line-height: 1.3333733333;
@@ -52,6 +52,20 @@
     font-size: 19px;
     line-height: 1.2105263158;
     letter-spacing: .012em;
+  }
+}
+
+@mixin offerHeadline {
+  font-size: 28px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: .007em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0em;
   }
 
 

@@ -1,0 +1,58 @@
+@import "mixins";
+@import "tyopgraphy";
+
+.valueSection {
+  position: relative;
+  z-index: 4;
+
+
+  & > div {
+    @include container;
+    padding: 0 0 150px;
+
+    ul {
+      list-style-type: none;
+      color: #fff;
+      font-family: SF Pro Display, sans-serif;
+
+      font-size: 28px;
+      line-height: 1.2858342857;
+      font-weight: 700;
+      letter-spacing: .007em;
+
+      @include tablet {
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: 0em;
+      }
+      @include laptop {
+        font-size: 48px;
+        line-height: 1.0834933333;
+        letter-spacing: -0.003em;
+      }
+      @include desktop {
+        font-size: 64px;
+        line-height: 1.0625;
+        letter-spacing: -0.009em;
+      }
+
+      li {
+        margin-top: 50px;
+      }
+
+      li:first-child {
+        margin-top: 0;
+      }
+
+    }
+  }
+}
+
+.pricingSection {
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 175px;
+    @include container;
+  }
+}

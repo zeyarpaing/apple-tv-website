@@ -1,0 +1,188 @@
+@import "mixins";
+@import "tyopgraphy";
+@import "colors";
+
+.tvAppSection {
+  min-height: 50vh;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 150px;
+
+  .tvAppHeader {
+    text-align: center;
+    padding-top: 130px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 27px;
+
+    @include tablet {
+      padding-top: 103px;
+      width: 550px;
+      padding-bottom: 20px;
+    }
+
+    @include laptop {
+      padding-top: 130px;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 52px;
+      width: 100%;
+    }
+
+    img {
+      width: 57px;
+      height: 57px;
+
+      @include laptop {
+        width: 76px;
+        height: 76px;
+      }
+      @include desktop {
+        width: 86px;
+        height: 86px;
+      }
+    }
+
+    h2 {
+      @include app-headline;
+      color: $heading;
+      margin-top: 17px;
+    }
+
+    p {
+      margin-top: 20px;
+      margin-bottom: 18px;
+
+      br {
+        display: none;
+        @include tablet {
+          display: block;
+        }
+      }
+
+      @include body;
+
+      a {
+        color: $linkColor;
+      }
+    }
+  }
+
+  .deviceContainer {
+    @include container;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px auto 67px;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    & > div {
+      text-align: center;
+      flex-basis: 33%;
+      margin-bottom: 30px;
+
+      @include tablet {
+        flex-basis: auto;
+        justify-content: center;
+      }
+
+      .deviceWrapper {
+        img {
+          height: 48px;
+
+          @include tablet {
+            height: 64px;
+          }
+          @include laptop {
+            height: 81px;
+          }
+        }
+      }
+
+      h3 {
+        margin-top: 17px;
+        color: $heading;
+        @include deviceName;
+
+      }
+    }
+  }
+
+  .varietyHeader {
+    p {
+      @include offerHeadline;
+      max-width: 91.6666666667%;
+      margin: 0 auto;
+      text-align: center;
+
+      @include tablet {
+        max-width: 50%;
+      }
+      @include laptop {
+        max-width: 41.6666666667%;
+      }
+    }
+
+    ul {
+      text-align: center;
+      margin-top: 14px;
+
+      li {
+        margin-top: 9px;
+      }
+    }
+  }
+
+  .externalTVs {
+    display: flex;
+    justify-content: center;
+    margin: 34px auto 29px;
+    max-width: 340px;
+    flex-wrap: wrap;
+
+    @include tablet {
+      margin-bottom: 58px;
+      max-width: 100%;
+    }
+
+    @include laptop {
+      margin-top: 38px;
+      text-align: center;
+      justify-content: space-between;
+    }
+
+    div {
+      margin-bottom: 35px;
+      padding: 0 10px;
+      flex-basis: unset;
+
+
+      @include tablet {
+        margin-bottom: 29px;
+        padding: 0 23px;
+        flex-basis: border-box;
+      }
+
+      @include laptop {
+        padding: 0 30px;
+        margin-bottom: 26px;
+      }
+
+      img {
+        height: 48px;
+
+        @include tablet {
+          height: 64px;
+        }
+        @include laptop {
+          height: 81px;
+        }
+      }
+    }
+  }
+}
+
+

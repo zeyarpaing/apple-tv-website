@@ -3,21 +3,38 @@
 @import "tyopgraphy";
 
 .appleService {
-  width: 97%;
   max-width: 1360px;
   margin: 0 auto;
 
   .service1 {
     background-color: $serviceBg;
+    padding-top: 20px;
     display: flex;
+    margin: 0 auto;
+
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      max-width: 733px;
+
+      & > img {
+        height: 172px;
+      }
+    }
+    @include laptop {
+      & > img {
+        height: 330px;
+      }
+    }
 
     & > img {
-      width: 544px;
-      height: 330px;
-      margin-top: 126px;
-      margin-bottom: 128px;
-      min-width: 544px;
-      margin-left: 6%;
+      margin-top: 42px;
+      margin-bottom: 77px;
+      margin-left: 30px;
+      width: 299px;
     }
 
     & > div {

@@ -23,6 +23,11 @@
     @include app-headline;
     text-align: center;
     color: $heading;
+    margin-bottom: 45px;
+
+    @include laptop {
+      margin-bottom: 52px;
+    }
   }
 
 

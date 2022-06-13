@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import styles from '../../styles/Home.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HeroSection = ({ scrollY }: { scrollY: number }) => {
   let vdRef = useRef();
@@ -34,7 +35,9 @@ const HeroSection = ({ scrollY }: { scrollY: number }) => {
                 </p>
               </h2>
               <div className={styles.cta_section}>
-                <a href="#">Stream now</a>
+                <Link href="/tv.apple.com">
+                  <a href="#">Stream now</a>
+                </Link>
               </div>
               <p className={styles.cta_desc}>
                 <span> Watch on the </span>

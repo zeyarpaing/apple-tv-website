@@ -22,7 +22,12 @@ const TVAppSection = () => {
         <p>
           Find the Apple TV app on your favorite Apple devices. <br />
           Or watch Apple TV+ online at{' '}
-          <ExternalLink lightColor={true} label="tv.apple.com" />.
+          <ExternalLink
+            lightColor={true}
+            href="/tv.apple.com"
+            label="tv.apple.com"
+          />
+          .
         </p>
       </div>
       <div className={styles.deviceContainer}>

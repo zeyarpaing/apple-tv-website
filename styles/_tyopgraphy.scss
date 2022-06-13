@@ -86,3 +86,17 @@
   }
 
 }
+
+@mixin routerEyebrow {
+  font-size: 19px;
+  line-height: 1.2105263158;
+  font-weight: 600;
+  letter-spacing: .012em;
+
+  @include laptop {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+  }
+}

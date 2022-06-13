@@ -1,5 +1,4 @@
 import { NavItem } from './state';
-import * as announcementActions from './actions';
 
 const initialState: NavItem[] = [
   {
@@ -16,10 +15,5 @@ export const reducer = (
   state = initialState,
   action: { type: any; message: any },
 ) => {
-  switch (action.type) {
-    case announcementActions.UPDATE_ANNOUNCEMENT:
-      return Object.assign({}, state, { message: action.message });
-    default:
-      return state;
-  }
+  return state;
 };

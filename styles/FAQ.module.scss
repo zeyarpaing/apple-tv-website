@@ -1,2 +1,11 @@
 @import "mixins";
 @import "tyopgraphy";
+@import "colors";
+
+.FAQ {
+  h2 {
+    @include app-headline;
+    text-align: center;
+    color: $heading;
+  }
+}

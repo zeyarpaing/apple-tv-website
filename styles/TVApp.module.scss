@@ -6,7 +6,9 @@
   min-height: 50vh;
   position: relative;
   z-index: 1;
-  padding-bottom: 150px;
+  @include laptop {
+    padding-bottom: 150px;
+  }
 
   .tvAppHeader {
     text-align: center;

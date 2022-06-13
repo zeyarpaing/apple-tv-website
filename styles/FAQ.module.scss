@@ -6,8 +6,7 @@
 .faqWrapper {
   @include container;
 
-  padding: 15px 0px;
-  padding-bottom: 84px;
+  padding: 15px 0px 84px;
   border-radius: 10px;
   background-color: #fff;
 
@@ -44,6 +43,11 @@
     .translated {
       transform: scaleY(-100%);
     }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #d2d2d7;
   }
 
   .answer {

@@ -2,22 +2,15 @@
 @import "tyopgraphy";
 @import "colors";
 
-.FAQ {
-  @include container;
-
-  .questionsWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-}
 
 .faqWrapper {
   @include container;
 
   padding: 15px 0px;
+  padding-bottom: 84px;
   border-radius: 10px;
   background-color: #fff;
+
 
   h2 {
     @include app-headline;

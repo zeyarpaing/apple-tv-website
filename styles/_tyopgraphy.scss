@@ -70,3 +70,24 @@
 
 
 }
+
+@mixin routerHeadline {
+  font-size: 28px;
+  line-height: 1.0714285714;
+  letter-spacing: .012em;
+  font-weight: 700;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 1.1666666667;
+    letter-spacing: .009em;
+  }
+
+  @include laptop {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0em;
+  }
+
+}

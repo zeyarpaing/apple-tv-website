@@ -9,6 +9,7 @@ import FAQ from '../components/home/FAQ';
 import TVAppSection from '../components/home/TVAppSection';
 import HeroSection from '../components/home/HeroSection';
 import ValueSection from '../components/home/ValueSection';
+import AppleService from '../components/home/AppleService';
 
 const Home: NextPage = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <ValueSection scrollY={scrollY} />
       <TVAppSection />
       <FAQ />
+      <AppleService />
     </Layout>
   );
 };

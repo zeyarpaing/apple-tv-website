@@ -1,0 +1,74 @@
+@import "mixins";
+@import "colors";
+@import "tyopgraphy";
+
+.appleService {
+  width: 97%;
+  max-width: 1360px;
+  margin: 0 auto;
+
+  .service1 {
+    background-color: $serviceBg;
+    display: flex;
+
+    & > img {
+      width: 544px;
+      height: 330px;
+      margin-top: 126px;
+      margin-bottom: 128px;
+      min-width: 544px;
+      margin-left: 6%;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding-right: 4%;
+
+      p {
+        @include routerHeadline;
+        text-align: center;
+        margin-top: 27px;
+        margin-bottom: 13px;
+
+        @include laptop {
+          max-width: 700px;
+
+        }
+      }
+
+      a.link {
+        margin-top: 20px;
+        margin-bottom: 29px;
+        background-color: #1d1d1f;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+
+    }
+  }
+}
+
+.link {
+
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 980px;
+  background: #0071e3;
+  min-width: 26px;
+  padding: 12px 22px;
+  font-size: 14px;
+  line-height: 1.4285914286;
+  letter-spacing: -0.016em;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+}

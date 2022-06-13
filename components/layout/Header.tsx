@@ -1,5 +1,6 @@
 import styles from './Header.module.scss';
 import ExternalLink from '../elements/ExternalLink';
+import { useSelector } from 'react-redux';
 
 const navItems = [
   'Store',
@@ -14,6 +15,8 @@ const navItems = [
   'Support',
 ];
 const Header = () => {
+  const navState = useSelector((state) => state);
+  console.log('navstate', navState);
   return (
     <>
       <nav className={styles.appleNavHeader}>

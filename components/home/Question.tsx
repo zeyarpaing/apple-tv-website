@@ -1,5 +1,5 @@
 import ExternalLink from '../elements/ExternalLink';
-import {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import styles from '../../styles/FAQ.module.scss';
 
 type questionProps = {
@@ -8,10 +8,9 @@ type questionProps = {
   more?: string;
 };
 
-const Question = ({question, answer, more}: questionProps) => {
+const Question = ({ question, answer, more }: questionProps) => {
   const collapse = useRef();
   const [expanded, setExpanded] = useState(false);
-
 
   function collapseSection(element: any) {
     let sectionHeight = element.scrollHeight;
@@ -50,36 +49,42 @@ const Question = ({question, answer, more}: questionProps) => {
   }
 
   return (
-      <>
-        <div className={styles.faqQuestion}>
-          <div onClick={toggleFaq} className={styles.title}>
-            <h4>{question}</h4>
-            <span>
+    <>
+      <div className={styles.faqQuestion}>
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={toggleFaq}
+          className={styles.title}
+        >
+          <h4>{question}</h4>
+          <span>
             <svg
-                className={expanded ? styles.translated : ''}
-                fill="none"
-                height="8"
-                viewBox="0 0 17 8"
-                width="17"
-                xmlns="http://www.w3.org/2000/svg"
+              className={expanded ? styles.translated : ''}
+              width="23"
+              height="13"
+              viewBox="0 0 23 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                  d="M1 1.00006L8.5 6.50006L16 1.00006"
-                  stroke="black"
-                  strokeLinecap="round"
-                  strokeWidth="1.8"
+                d="M21.4756 1.62769L11.5 11.1551L1.52441 1.62769"
+                stroke="#86868B"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </span>
-          </div>
-          <hr/>
         </div>
-        {/* @ts-ignore */}
-        <div className={styles.collapsible} ref={collapse}>
-          <p className={styles.answer}>{answer}</p>
-          {more && <ExternalLink label={more} rightChevron={true}/>}
-        </div>
-      </>
+        <hr />
+      </div>
+      {/* @ts-ignore */}
+      <div className={styles.collapsible} ref={collapse}>
+        <p className={styles.answer}>{answer}</p>
+        {more && <ExternalLink label={more} rightChevron={true} />}
+      </div>
+    </>
   );
 };
 

@@ -2,22 +2,14 @@
 @import "tyopgraphy";
 @import "colors";
 
-.FAQ {
-  @include container;
-
-  .questionsWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-}
 
 .faqWrapper {
   @include container;
 
-  padding: 15px 0px;
+  padding: 15px 0px 84px;
   border-radius: 10px;
   background-color: #fff;
+
 
   h2 {
     @include app-headline;
@@ -38,10 +30,18 @@
     justify-content: space-between;
     cursor: pointer;
 
+    &:focus {
+      outline: rgba(41, 151, 255, 0.8) solid 4px;
+    }
+
+
     h4 {
-      font-weight: bold;
-      font-size: 16px;
       padding-right: 20px;
+      font-size: 24px;
+      line-height: 1.1666666667;
+      font-weight: 600;
+      letter-spacing: .009em;
+      font-family: SF Pro Display, sans-serif;
     }
 
     svg {
@@ -51,6 +51,11 @@
     .translated {
       transform: scaleY(-100%);
     }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #d2d2d7;
   }
 
   .answer {

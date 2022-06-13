@@ -1,5 +1,6 @@
 @import "/fonts/fonts.css";
 @import "colors";
+@import "mixins";
 
 html,
 body {
@@ -77,4 +78,22 @@ ul, ol {
 .entered-floatin {
   opacity: .999;
   transform: translateY(0);
+}
+
+br.mobile {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+br.tablet {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include laptop {
+    display: none;
+  }
 }

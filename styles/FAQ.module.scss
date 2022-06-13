@@ -3,9 +3,62 @@
 @import "colors";
 
 .FAQ {
+  @include container;
+
+  .questionsWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.faqWrapper {
+  @include container;
+
+  padding: 15px 0px;
+  border-radius: 10px;
+  background-color: #fff;
+
   h2 {
     @include app-headline;
     text-align: center;
     color: $heading;
   }
+
+
+  .title {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    h4 {
+      font-weight: bold;
+      font-size: 16px;
+      padding-right: 20px;
+    }
+
+    svg {
+      transition: all 0.3s ease;
+    }
+
+    .translated {
+      transform: scaleY(-100%);
+    }
+  }
+
+  .answer {
+    padding: 5px 0;
+    @include body;
+  }
+
+  .collapsible {
+    overflow: hidden;
+    transition: height 0.24s ease-out;
+    height: 0;
+    white-space: pre-line;
+    font-size: 13px;
+  }
+
 }

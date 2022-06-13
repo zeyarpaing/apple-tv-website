@@ -41,9 +41,10 @@ const FAQs = [
       'Absolutely. Download your favorite Apple Originals to your Apple device and watch them anywhere, anytime without a Wi-Fi connection.',
   },
 ];
+
 const FAQ = () => {
   return (
-    <section className={styles.FAQ}>
+    <section className={styles.faqWrapper}>
       <h2>Questions? Answers.</h2>
       <div className={styles.questionsWrapper}>
         {FAQs.map((faq, idx) => (

@@ -15,10 +15,10 @@
     width: 100%;
     z-index: 1;
     //height: calc(100% + 100vh + 20rem);
-    height: 2512px;
+    height: 2280px;
 
     @include mobile {
-      height: 2320px;
+      height: 2020px;
     }
     @include tablet {
       height: 1877px;

@@ -37,8 +37,7 @@ const AppleService = () => {
             <img src="/icons/tv-4k.png" />
             <p>
               A higher
-              <br className="mobile" />
-              definition of TV.
+              <br className="mobile" /> definition of TV.
             </p>
             <div className={styles.btns}>
               <a className={styles.link}>Buy</a>
@@ -51,7 +50,7 @@ const AppleService = () => {
             <img src="/icons/service-ariplay.jpg" />
           </div>
           <div className={styles.contentWrapper}>
-            <span>AirPlay</span>
+            <span className={styles.airPlay}>AirPlay</span>
             <p>
               Bring Apple TV+ to
               <br /> a screen near you.

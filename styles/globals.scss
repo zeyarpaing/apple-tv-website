@@ -62,6 +62,10 @@ ul, ol {
   alt: "";
 }
 
+.icon-playsolid::after {
+  content: "";
+}
+
 .more:after {
   content: "";
   padding-left: 0.3em;

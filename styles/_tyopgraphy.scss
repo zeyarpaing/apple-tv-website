@@ -100,3 +100,24 @@
     letter-spacing: .004em;
   }
 }
+
+@mixin showEyebrow {
+  font-size: 14px;
+  line-height: 1.4285914286;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+  font-family: SF Pro Text, sans-serif;
+
+  @include laptop {
+    font-size: 17px;
+    line-height: 1.4705882353;
+    letter-spacing: -0.022em;
+  }
+  @include desktop {
+    font-size: 21px;
+    line-height: 1.1904761905;
+    font-weight: 600;
+    letter-spacing: .011em;
+    font-family: SF Pro Display, "SF Pro Text", sans-serif;
+  }
+}

@@ -142,35 +142,69 @@ $animationSpeed: 40s;
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 506px;
+
+      height: 494px;
+      @include tablet {
+        height: 321px;
+      }
+      @include laptop {
+
+        height: 506px;
+      }
 
 
       & > section {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
-        width: calc(900px * 5);
+
         height: 100%;
         display: flex;
         transition: transform 0.5s ease;
         will-change: transform;
+
+        transform: translateX(-50%);
+        width: calc(278px * 5);
+
+        @include tablet {
+          width: calc(555px * 5);
+        }
+        @include laptop {
+          width: calc(900px * 5);
+        }
 
 
         .carouselItem {
           transform: scale(1) translateX(0%);
           transition: transform 0.5s ease;
           will-change: transform;
-          width: 900px;
-          height: 506px;
+
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: auto 100%;
           background-position: center;
           margin: 0 10px 15px;
           color: #fff;
           border-radius: 15px;
+          width: 278px;
+          height: 494px;
+
+          @include tablet {
+            width: 555px;
+            height: 321px;
+          }
+          @include laptop {
+            width: 900px;
+            height: 506px;
+          }
 
           img {
-            height: 50px;
+            height: 30px;
+            @include tablet {
+              height: 40px;
+            }
+            @include laptop {
+
+              height: 50px;
+            }
           }
         }
       }

@@ -62,6 +62,10 @@ ul, ol {
   alt: "";
 }
 
+.icon-playsolid::after {
+  content: "";
+}
+
 .more:after {
   content: "";
   padding-left: 0.3em;
@@ -95,6 +99,26 @@ br.tablet {
   }
   @include laptop {
     display: none;
+  }
+}
+
+.streamNow {
+  background-color: #fff;
+  border-radius: 980px;
+  padding: 12px 22px;
+  font-size: 14px;
+  line-height: 1.4285914286;
+  letter-spacing: -0.016em;
+  font-family: SF Pro Text, sans-serif;
+  font-weight: 700;
+  color: $body;
+
+  .icon {
+    padding-left: 0.3em;
+  }
+
+  &:hover {
+    opacity: 0.88;
   }
 }
 

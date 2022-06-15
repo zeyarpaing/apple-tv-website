@@ -58,9 +58,10 @@ const Carousel = ({ scrollY }: { scrollY: number }) => {
     //   setMovies(newMovie);
     // }, 700);
     applyResponsiveWidth();
-    window.addEventListener('resize', (e) => {
-      applyResponsiveWidth();
-    });
+    window.addEventListener('resize', applyResponsiveWidth);
+    return () => {
+      window.removeEventListener('resize', applyResponsiveWidth);
+    };
   }, []);
   return (
     <div className={styles.carouselWrapper}>

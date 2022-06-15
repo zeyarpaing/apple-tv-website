@@ -62,7 +62,7 @@ const Carousel = ({ scrollY }: { scrollY: number }) => {
               // top: scrollY - 1800 + 'px',
             }}
           >
-            <div>
+            <div className={styles.movieTitle}>
               <p>Now Streaming</p>
               <img
                 src={`/movies/${movies[Math.floor(movies.length / 2)]}.png`}
@@ -83,7 +83,7 @@ const Carousel = ({ scrollY }: { scrollY: number }) => {
                 }}
                 className={styles.carouselItem}
               >
-                <div>
+                <div className={styles.movieTitle}>
                   <p>Now Streaming</p>
                   <img src={`/movies/${mov}.png`} />
                 </div>

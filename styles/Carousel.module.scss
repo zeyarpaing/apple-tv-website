@@ -1,4 +1,5 @@
 @import "mixins";
+@import "tyopgraphy";
 
 .carouselSection {
   background-color: #000;
@@ -131,7 +132,6 @@ $animationSpeed: 40s;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        padding: 40px;
         color: #fff;
         border-radius: 15px;
 
@@ -165,7 +165,6 @@ $animationSpeed: 40s;
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
-          padding: 40px;
           margin: 0 10px 15px;
           color: #fff;
           border-radius: 15px;
@@ -174,6 +173,16 @@ $animationSpeed: 40s;
             height: 50px;
           }
         }
+      }
+    }
+
+    .movieTitle {
+      max-width: 90%;
+      margin: 6% auto;
+
+      p {
+        @include showEyebrow;
+        margin-bottom: 10px;
       }
     }
   }

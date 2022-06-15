@@ -26,7 +26,7 @@ const Home: NextPage = () => {
     <Layout>
       <HeroSection scrollY={scrollY} />
       <ValueSection scrollY={scrollY} />
-      <CarouselSection />
+      <CarouselSection scrollY={scrollY} />
       <TVAppSection />
       <FAQ />
       <AppleService />

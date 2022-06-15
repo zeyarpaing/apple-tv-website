@@ -1,11 +1,13 @@
 import styles from '../../styles/Carousel.module.scss';
 import InfiniteCarousel from '../elements/InfiniteCarousel';
+import Carousel from '../elements/Carousel';
 
-const CarouselSection = () => {
+const CarouselSection = ({ scrollY }: { scrollY: number }) => {
   return (
     <section className={styles.carouselSection}>
-      <InfiniteCarousel animationSpeed={46} startIndex={1} />
-      <InfiniteCarousel animationSpeed={38} startIndex={6} />
+      <Carousel scrollY={scrollY} />
+      <InfiniteCarousel animationSpeed={45} startIndex={1} isRunning />
+      <InfiniteCarousel animationSpeed={35} startIndex={6} isRunning />
     </section>
   );
 };
